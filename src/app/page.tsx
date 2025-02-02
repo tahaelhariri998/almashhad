@@ -18,13 +18,13 @@ const PulsatingButton = () => {
         className={`
           relative
           group
-          bg-gradient-to-r from-cyan-500 to-cyan-600
+          bg-gradient-to-r from-orange-500 to-orange-600
           text-white
           text-xl
           font-bold
           px-8
           py-4
-          rounded-full
+        
           transform
           transition-all
           duration-300
@@ -35,10 +35,10 @@ const PulsatingButton = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="absolute  rounded-full bg-cyan-400 animate-ping opacity-30 w-[70%] h-[70%]"></div>
+        <div className="absolute  rounded-full bg-orange-400 animate-ping opacity-30 w-[70%] h-[70%]"></div>
 
         <span className="relative z-10 flex items-center justify-center">
-          <span className=" ">📞</span>
+          <Phone className="w-6 h-6" />
           <span className=" text-xs ">احصل على استشارة مجانية الآن!</span> 
         </span>
         <span className=" "> أنقر هنا </span>
@@ -264,34 +264,22 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div>
-      <svg className="w-full h-auto" width="581" height="90" viewBox="0 0 581 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="581" height="90" fill="#0891B2"/>
-
-  <text x="50%" y="30%" font-family="Almarai" font-weight="700" font-size="27" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle">
-  غيرنا يشتغلون كل شيء.. واحنا مختصين بلاط وسيراميك وبس! 
-  </text>
-  <text x="50%" y="70%" font-family="Almarai" font-weight="700" font-size="27" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle">
-    نرفض أي شغل ثاني لأننا نؤمن بالتخصص 💯✨
-  </text>
-</svg>
-      </div>
-
+      
       {/* Hero Section */}
       <header className="bg-gradient-to-b from-gray-50 to-white py-2 sm:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             
             <div className="space-y-6 mb-12">
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                <div className="mb-4 transform transition-all duration-500 hover:scale-105">
-                  <span className="mx-2">✨متخصصون فقط في</span>
-                  <p className="text-cyan-600 mx-2 animate-pulse">تركيب البلاط والسيراميك</p>
-                </div>
-                <span className="block text-2xl sm:text-3xl transform transition-all duration-500 hover:scale-105">
-                  🌟 بجميع إمارات الدولة
-                </span>
-              </h1>
+            <h1 className="text-3xl sm:text-xl font-bold text-gray-900">
+  <span className="block mx-2 text-s">متخصصون فقط في </span>
+  <span className="text-cyan-600 mx-2 animate-pulse text-[60%]">تركيب البلاط والسيراميك </span>
+  <span className="text-[60%] sm:text-xl transform transition-all duration-500 hover:scale-105">بجميع إمارات الدولة</span>
+</h1>
+
+
+
+
 
               <div className="flex flex-col items-center gap-4 text-lg text-gray-700">
   <FeatureBadge>⚡️ ننجز مشروعك في وقته</FeatureBadge>
@@ -304,6 +292,17 @@ const LandingPage = () => {
             <div className="mb-4">
               <PulsatingButton />
             </div>
+            <div className="mt-8 transition-transform duration-300">
+          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 sm:p-6 rounded-lg border-2 border-yellow-200">
+            <p className="text-base sm:text-lg text-yellow-800 leading-relaxed">
+            غيرنا يشتغلون كل شيء.. واحنا مختصين بلاط وسيراميك وبس!               <br />
+              <strong className="block mt-4 text-sm sm:text-lg text-orange-700">
+              نرفض أي شغل ثاني لأننا نؤمن بالتخصص 💯✨
+              </strong>
+            </p>
+          </div>
+        </div>
+
 
           </div>
         </div>

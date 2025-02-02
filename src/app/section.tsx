@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AlertTriangle, ChevronDown, ChevronUp, Clock, Star } from 'lucide-react';
+import { AlertTriangle, Phone, ChevronDown, ChevronUp, Clock, Star } from 'lucide-react';
 
 interface StudyResultProps {
   title: string;
@@ -50,48 +50,47 @@ const StudyResult: React.FC<StudyResultProps> = ({ title, percentage, descriptio
     </div>
   );
 };
-
 const PulsatingButton = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const whatsappNumber = "00971509620251";
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
-
-  return (
-    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-      <button
-      
-        className={`
-          relative
-          group
-          bg-gradient-to-r from-cyan-500 to-cyan-600
-          text-white
-          text-xl
-          font-bold
-          px-8
-          py-4
-          rounded-full
-          transform
-          transition-all
-          duration-300
-          hover:scale-105
-          hover:shadow-xl
-          ${isHovered ? 'animate-pulse' : ''}
-        `}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <div className="absolute  rounded-full bg-cyan-400 animate-ping opacity-30 w-[70%] h-[70%]"></div>
-
-        <span className="relative z-10 flex items-center justify-center">
-          <span className=" ">📞</span>
-          <span className=" text-xs ">احصل على استشارة مجانية الآن!</span> 
-        </span>
-        <span className=" "> أنقر هنا </span>
-
-      </button>
-    </a>
-  );
-};
+    const [isHovered, setIsHovered] = useState(false);
+    const whatsappNumber = "00971509620251";
+    const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  
+    return (
+      <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+        <button
+        
+          className={`
+            relative
+            group
+            bg-gradient-to-r from-orange-500 to-orange-600
+            text-white
+            text-xl
+            font-bold
+            px-8
+            py-4
+          
+            transform
+            transition-all
+            duration-300
+            hover:scale-105
+            hover:shadow-xl
+            ${isHovered ? 'animate-pulse' : ''}
+          `}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="absolute  rounded-full bg-orange-400 animate-ping opacity-30 w-[70%] h-[70%]"></div>
+  
+          <span className="relative z-10 flex items-center justify-center">
+            <Phone className="w-6 h-6" />
+            <span className=" text-xs ">احصل على استشارة مجانية الآن!</span> 
+          </span>
+          <span className=" "> أنقر هنا </span>
+  
+        </button>
+      </a>
+    );
+  };
 const StudyResultsSection = () => {
   return (
     <section className="py-8 sm:py-12 bg-gradient-to-b from-gray-50 to-white">
