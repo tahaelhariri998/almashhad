@@ -93,7 +93,7 @@ const TrustIndicator: React.FC<TrustIndicatorProps> = ({ icon, text }) => (
     <span>{text}</span>
   </div>
 );
-
+console.log(TrustIndicator);
 interface StudyResultProps {
   title: string;
   percentage: string;
