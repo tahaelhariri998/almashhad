@@ -14,6 +14,7 @@ const PulsatingButton = () => {
   return (
     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
       <button
+      
         className={`
           relative
           group
@@ -34,14 +35,19 @@ const PulsatingButton = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
+        <div className="absolute  rounded-full bg-cyan-400 animate-ping opacity-30 w-[70%] h-[70%]"></div>
+
         <span className="relative z-10 flex items-center justify-center">
-          <span className="mr-2">📞</span>
-          احصل على استشارة مجانية الآن!
+          <span className=" ">📞</span>
+          <span className=" text-xs ">احصل على استشارة مجانية الآن!</span> 
         </span>
+        <span className=" "> أنقر هنا </span>
+
       </button>
     </a>
   );
 };
+
 
 const FeatureBadge: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <span className="
@@ -67,6 +73,7 @@ interface TrustIndicatorProps {
 
 const TrustIndicator: React.FC<TrustIndicatorProps> = ({ icon, text }) => (
   <div className="
+  
     bg-white 
     px-4 
     py-3 
@@ -258,25 +265,23 @@ const LandingPage = () => {
       </div>
 
       <div>
-        <svg className="w-full h-auto" width="581" height="60" viewBox="0 0 581 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="581" height="60" fill="#0891B2"/>
-          <text x="50%" y="50%" font-family="Almarai" font-weight="700" font-size="13.8" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle">
-            غيرنا يشتغلون كل شيء.. واحنا مختصين بلاط وسيراميك وبس! نرفض أي شغل ثاني لأننا نؤمن بالتخصص 💯✨
-          </text>
-        </svg>
+      <svg className="w-full h-auto" width="581" height="90" viewBox="0 0 581 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="581" height="90" fill="#0891B2"/>
+
+  <text x="50%" y="30%" font-family="Almarai" font-weight="700" font-size="27" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle">
+  غيرنا يشتغلون كل شيء.. واحنا مختصين بلاط وسيراميك وبس! 
+  </text>
+  <text x="50%" y="70%" font-family="Almarai" font-weight="700" font-size="27" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle">
+    نرفض أي شغل ثاني لأننا نؤمن بالتخصص 💯✨
+  </text>
+</svg>
       </div>
 
       {/* Hero Section */}
-      <header className="bg-gradient-to-b from-gray-50 to-white py-8 sm:py-20">
+      <header className="bg-gradient-to-b from-gray-50 to-white py-2 sm:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-cyan-50 rounded-full px-6 py-2 mb-8 animate-bounce hover:animate-none cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-md">
-              <span className="text-cyan-800 font-bold">
-                <span className="inline-block">🏆</span>
-                <span className="mx-2 animate-pulse">الأفضل في الإمارات</span>
-              </span>
-            </div>
-
+            
             <div className="space-y-6 mb-12">
               <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
                 <div className="mb-4 transform transition-all duration-500 hover:scale-105">
@@ -288,31 +293,18 @@ const LandingPage = () => {
                 </span>
               </h1>
 
-              <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-700">
-                <FeatureBadge>⚡️ ننجز مشروعك في وقته</FeatureBadge>
-                <FeatureBadge>💎 جودة مضمونة</FeatureBadge>
-                <FeatureBadge>🛡️ ضمان ذهبي 100%</FeatureBadge>
-              </div>
+              <div className="flex flex-col items-center gap-4 text-lg text-gray-700">
+  <FeatureBadge>⚡️ ننجز مشروعك في وقته</FeatureBadge>
+  <FeatureBadge>💎 جودة مضمونة</FeatureBadge>
+  <FeatureBadge>🛡️ ضمان ذهبي 100%</FeatureBadge>
+</div>
+
             </div>
 
-            <div className="mb-12">
+            <div className="mb-4">
               <PulsatingButton />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-              <TrustIndicator 
-                icon={<CheckCircle className="w-5 h-5 text-cyan-600 ml-2" />} 
-                text="معاينة مجانية"
-              />
-              <TrustIndicator 
-                icon={<CheckCircle className="w-5 h-5 text-cyan-600 ml-2" />} 
-                text="تسليم سريع"
-              />
-              <TrustIndicator 
-                icon={<CheckCircle className="w-5 h-5 text-cyan-600 ml-2" />} 
-                text="دفع مريح"
-              />
-            </div>
           </div>
         </div>
       </header>
@@ -320,7 +312,7 @@ const LandingPage = () => {
       <Section />
 
       {/* Services Section */}
-      <section className="py-16">
+      <section className="py-4">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl font-bold mb-8 text-black">خدماتنا المتخصصة 🛠️</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-black">
@@ -362,7 +354,7 @@ const LandingPage = () => {
       </section>
 
       {/* Guarantees Section */}
-      <section className="py-12 bg-gray-50 text-black">
+      <section className="py-12 bg-gray-50 text-black pb-36 ">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl font-bold mb-8">ضماناتنا لك 💯</h2>
           <div className="space-y-6">

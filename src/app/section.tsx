@@ -8,7 +8,7 @@ interface StudyResultProps {
 }
 
 const StudyResult: React.FC<StudyResultProps> = ({ title, percentage, description }) => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   return (
     <div id={title}>
@@ -53,40 +53,45 @@ const StudyResult: React.FC<StudyResultProps> = ({ title, percentage, descriptio
 
 const PulsatingButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  
-  // Combined event handlers for both mouse and touch devices.
-  const handlePressStart = () => setIsHovered(true);
-  const handlePressEnd = () => setIsHovered(false);
-  
+  const whatsappNumber = "00971509620251";
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
   return (
-    <button
-      className={`
-        relative
-        group
-        bg-gradient-to-r from-cyan-500 to-cyan-600
-        text-white
-        text-base sm:text-xl
-        font-bold
-        px-4 sm:px-8
-        py-2 sm:py-4
-        rounded-full
-        transition-all
-        duration-300
-        ${isHovered ? 'animate-pulse' : ''}
-      `}
-      onMouseEnter={handlePressStart}
-      onMouseLeave={handlePressEnd}
-      onTouchStart={handlePressStart}
-      onTouchEnd={handlePressEnd}
-    >
-      <span className="relative z-10 flex items-center justify-center">
-        <span className="mr-2">📞</span>
-        احصل على استشارة مجانية الآن!
-      </span>
-    </button>
+    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+      <button
+      
+        className={`
+          relative
+          group
+          bg-gradient-to-r from-cyan-500 to-cyan-600
+          text-white
+          text-xl
+          font-bold
+          px-8
+          py-4
+          rounded-full
+          transform
+          transition-all
+          duration-300
+          hover:scale-105
+          hover:shadow-xl
+          ${isHovered ? 'animate-pulse' : ''}
+        `}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="absolute  rounded-full bg-cyan-400 animate-ping opacity-30 w-[70%] h-[70%]"></div>
+
+        <span className="relative z-10 flex items-center justify-center">
+          <span className=" ">📞</span>
+          <span className=" text-xs ">احصل على استشارة مجانية الآن!</span> 
+        </span>
+        <span className=" "> أنقر هنا </span>
+
+      </button>
+    </a>
   );
 };
-
 const StudyResultsSection = () => {
   return (
     <section className="py-8 sm:py-12 bg-gradient-to-b from-gray-50 to-white">
@@ -98,7 +103,7 @@ const StudyResultsSection = () => {
           <div className="flex items-center">
               {/* النص على اليمين */}
   <div className="flex-1 text-right">
-    <div className="bg-red-100 inline-block text-red-800 px-4 py-2 rounded-full text-xs sm:text-sm font-medium">
+    <div className="bg-red-100 inline-block text-red-800 px-4 py- rounded-full text-xs sm:text-sm font-medium">
       ⚠️ نتائج مقلقة
     </div>
   </div>
@@ -164,6 +169,7 @@ const StudyResultsSection = () => {
           </div>
         </div>
 
+ 
         <div className="mt-12 text-center">
           <PulsatingButton />
         </div>
