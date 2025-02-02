@@ -106,6 +106,7 @@ const StudyResult: React.FC<StudyResultProps> = ({ title, percentage, descriptio
     </div>
   </div>
 );
+console.log(StudyResult)
 
 interface FeatureGroupProps {
   title: string;
@@ -129,6 +130,7 @@ const FeatureGroup: React.FC<FeatureGroupProps> = ({ title, points, icon }) => (
     </ul>
   </div>
 );
+console.log(FeatureGroup)
 
 interface StatHighlightProps {
   number: number;
@@ -141,7 +143,7 @@ const StatHighlight: React.FC<StatHighlightProps> = ({ number, text }) => (
     <div className="text-gray-700">{text}</div>
   </div>
 );
-
+console.log(StatHighlight)
 interface WarningPointProps {
   text: string;
 }
@@ -152,7 +154,7 @@ const WarningPoint: React.FC<WarningPointProps> = ({ text }) => (
     <span className="text-red-700">{text}</span>
   </div>
 );
-
+console.log(WarningPoint)
 interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
