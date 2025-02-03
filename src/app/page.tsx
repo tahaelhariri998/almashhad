@@ -8,8 +8,8 @@ import Section from "./section";
 
 const PulsatingButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const whatsappNumber = "00971509620251";
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  const whatsappNumber = "+971509620251";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%2C%0A%D8%A7%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9`;
 
   return (
     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -272,9 +272,9 @@ const LandingPage = () => {
             
             <div className="space-y-6 mb-12">
             <h1 className="text-3xl sm:text-xl font-bold text-gray-900">
-  <span className="block mx-2 text-s">متخصصون فقط في </span>
-  <span className="text-cyan-600 mx-2 animate-pulse text-[60%]">تركيب البلاط والسيراميك </span>
-  <span className="text-[60%] sm:text-xl transform transition-all duration-500 hover:scale-105">بجميع إمارات الدولة</span>
+  <span className="block mx-2 text-s">متخصصون فقط  </span>
+  <span className="text-cyan-600   animate-pulse text-[55%]">في تركيب البلاط والسيراميك </span>
+  <span className="text-[55%] sm:text-xl transform transition-all duration-500 hover:scale-105">بجميع إمارات الدولة</span>
 </h1>
 
 
