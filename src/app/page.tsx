@@ -8,7 +8,7 @@ import Section from "./section";
 
 const PulsatingButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const whatsappNumber = "+971509620251";
+  const whatsappNumber = "+971507323644";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%2C%0A%D8%A7%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9`;
 
   return (
@@ -205,7 +205,7 @@ const GuaranteeCard: React.FC<GuaranteeCardProps> = ({ title, description }) => 
 const FloatingContactButton = () => {
   return (
     <a
-      href="tel:0509620251"
+      href="tel:0507323644"
       className="fixed bottom-6 right-6 z-50 sm:hidden group"
       aria-label="اتصل بنا"
     >
